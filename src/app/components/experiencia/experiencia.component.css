@@ -1,0 +1,42 @@
+.row{
+    padding: 20px;
+}
+p{
+    display: inline;
+}
+div{
+    background-color:white;
+    margin-top: 10px;
+    border-radius: 20px;
+ }
+.iconoboo{
+    text-align: right;
+    margin-top: -40px;
+    background-color: transparent;
+}
+p,h1{
+    font-size: 19px;
+}
+h2{
+    font-size: 28px;
+}
+.img,.texto{
+    display: inline-block;
+    text-align:justify;
+}
+.contenedor{
+     width:auto;  
+}
+.img-proyecto{
+    border-radius: 10%;
+    margin-bottom: 40px;
+}
+.vito{
+    margin-top:20px;
+}
+div1{
+    background-color:white;
+    margin-top: 10px;
+    border-radius: 20px;
+ }
+ 

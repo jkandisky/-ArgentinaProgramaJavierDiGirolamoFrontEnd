@@ -1,0 +1,27 @@
+<div class="container xavi" *ngIf="eduLab">
+    <div class="row xavi vito">
+      <br>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group vito">
+                <label for="nombreE" ><p>Nombre de la Insitucion</p></label>
+                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="eduLab.nombreE" required>
+              </div>
+              <br>
+              <div class="form-group vito">
+                <label for="descripcionE"><p>Descripcion</p></label>
+                <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="eduLab.descripcionE" required>
+              </div>
+              <br>
+              <div class="more">
+              <button class="btn btn-light ">
+                Actualizar
+              </button>
+              </div>
+              <br>
+            </form>
+
+        </div>
+    </div>
+</div>
+

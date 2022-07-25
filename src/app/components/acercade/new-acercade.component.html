@@ -1,0 +1,19 @@
+<div class="container xavi">
+    <div class="row vito">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                <label for="nombreA"><p>Descripcion a Incoporar</p></label>
+                <input type="text" class="form-control" id="nombreA" name="nombreA" [(ngModel)]="nombreA" required>
+              </div>
+              <br>
+              
+              <br>
+              <button class="btn btn-light">
+                Agregar
+              </button>
+            </form>
+
+        </div>
+    </div>
+</div>

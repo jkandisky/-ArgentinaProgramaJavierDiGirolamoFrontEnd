@@ -1,0 +1,17 @@
+.row{
+    background-color: black;
+    padding:20px;
+}
+p{
+    color:white;
+    font: size 14px;
+}
+footer{
+     display:flex;
+     flex-direction: column;
+     text-align: center;
+}
+div{
+    margin-top: 10px;
+    border-radius: 20px;
+}

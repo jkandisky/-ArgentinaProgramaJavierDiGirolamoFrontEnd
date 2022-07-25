@@ -1,0 +1,23 @@
+<div class="container xavi" *ngIf="sobLab">
+    <div class="row xavi vito">
+      <br>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group vito">
+                <label for="nombreS" ><p>Descripcion</p></label>
+                <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="sobLab.nombreS" required>
+              </div>
+              <br>
+              
+              <br>
+              <div class="more">
+              <button class="btn btn-light ">
+                Actualizar
+              </button>
+              </div>
+              <br>
+            </form>
+
+        </div>
+    </div>
+</div>

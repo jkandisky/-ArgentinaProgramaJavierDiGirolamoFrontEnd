@@ -1,0 +1,27 @@
+<div class="row">
+  <h2>Acerca de Mi</h2>
+<div class="col-lg-2">
+<button type="button" class="btn btn-dark" routerLink="/nuevasob" *ngIf="isLogged">
+Editar
+</button>
+</div>
+
+ <div class="col-lg 1 ">
+ <div class="col-lg-11">
+  <table class="table" style="border: hidden">
+    <tbody>
+      <tr *ngFor="let Sobremi of sobr">
+        <td><h6>{{Sobremi.nombreS}}</h6></td>
+        <td>{{Sobremi.descripcionS}}</td>
+        <td *ngIf="isLogged">
+        <button class="btn btn-light button" routerLink="/editsob/{{Sobremi.id}}"><i class="bi bi-pencil-square"></i></button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-light" (click)="delete(Sobremi.id)"><i class="bi bi-trash-fill"></i></button>
+        </td>
+        </tr>
+    </tbody>
+  </table>
+</div> 
+</div>
+</div>

@@ -1,0 +1,10 @@
+div{
+    background-color:black;
+    margin-right: -12px;
+    margin-left: -12px;
+    border-radius: 20px;
+}
+app-social{
+    float: right;
+    margin-top: 20px;
+}

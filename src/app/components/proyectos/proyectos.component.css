@@ -1,0 +1,35 @@
+.row{
+    padding: 20px;
+}
+
+div{
+    background-color:white;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.iconoboo{
+    text-align: right;
+    margin-top: -40px;
+    background-color: transparent;
+}
+video{
+    width:1300px;
+    height:300px;
+}
+.contenedor{
+    width:auto;
+}
+.img,.texto{
+    display: inline-block;
+    text-align:justify;
+}
+.img-proyecto{
+    border-radius: 10%;
+    margin-bottom: 40px;
+}
+p,h1{
+    font-size: 19px;
+}
+h2{
+    font-size: 28px;
+}

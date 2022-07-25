@@ -1,0 +1,23 @@
+<div class="container xavi" *ngIf="aceLab">
+    <div class="row xavi vito">
+      <br>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group vito">
+                <label for="nombreA" ><p>Descricpion</p></label>
+                <input type="text" class="form-control" id="nombreA" name="nombreA" [(ngModel)]="aceLab.nombreA" required>
+              </div>
+              <br>
+              
+              <br>
+              <div class="more">
+              <button class="btn btn-light ">
+                Actualizar
+              </button>
+              </div>
+              <br>
+            </form>
+
+        </div>
+    </div>
+</div>

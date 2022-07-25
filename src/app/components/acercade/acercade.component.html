@@ -1,0 +1,27 @@
+<div class="row vito1">
+  <h3>Javier Di Girolamo</h3>
+<div class="col-lg-2">
+<button type="button" class="btn btn-dark" routerLink="/nuevaace" *ngIf="isLogged">
+Editar
+</button>
+</div>
+
+ <div class="col-lg 1 ">
+ <div class="col-lg-11 vito">
+  <table class="table" style="border: hidden">
+    <tbody style="border: hidden">
+      <tr *ngFor="let Acercade of acer">
+        <td style="border: hidden"><h6>{{Acercade.nombreA}}</h6></td>
+        <td style="border: hidden">{{Acercade.descripcionA}}</td>
+        <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editace/{{Acercade.id}}"><i class="bi bi-pencil-square"></i></button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-light" (click)="delete(Acercade.id)"><i class="bi bi-trash-fill"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> 
+</div>
+</div>
