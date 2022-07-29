@@ -29,6 +29,8 @@ import { NewSobremiComponent } from './components/sobremi/new-sobremi.component'
 import { EditSobremiComponent } from './components/sobremi/edit-sobremi.component';
 import { NewAcercadeComponent } from './components/acercade/new-acercade.component';
 import { EditAcercadeComponent } from './components/acercade/edit-acercade.component';
+import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { EditAcercadeComponent } from './components/acercade/edit-acercade.compo
     NewSobremiComponent,
     EditSobremiComponent,
     NewAcercadeComponent,
-    EditAcercadeComponent
+    EditAcercadeComponent,
+    NewProyectosComponent,
+    EditProyectosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<div class="container xavi" *ngIf="proLab">
+    <div class="row xavi vito">
+      <br>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group vito">
+                <label for="nombreP" ><p>Nombre del Proyecto</p></label>
+                <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proLab.nombreP" required>
+              </div>
+              <br>
+              <div class="form-group vito">
+                <label for="descripcionP"><p>Descripcion</p></label>
+                <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proLab.descripcionP" required>
+              </div>
+              <br>
+              <div class="more">
+              <button class="btn btn-light ">
+                Actualizar
+              </button>
+              </div>
+              <br>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
