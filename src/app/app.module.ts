@@ -31,6 +31,8 @@ import { NewAcercadeComponent } from './components/acercade/new-acercade.compone
 import { EditAcercadeComponent } from './components/acercade/edit-acercade.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewHardsoftComponent } from './components/hardsoft/new-hardsoft.component';
+import { EditHardsoftComponent } from './components/hardsoft/edit-hardsoft.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     NewAcercadeComponent,
     EditAcercadeComponent,
     NewProyectosComponent,
-    EditProyectosComponent
+    EditProyectosComponent,
+    NewHardsoftComponent,
+    EditHardsoftComponent
   ],
   imports: [
     BrowserModule,

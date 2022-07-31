@@ -1,0 +1,27 @@
+<div class="container xavi" *ngIf="harLab">
+    <div class="row xavi vito">
+      <br>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group vito">
+                <label for="nombreH" ><p>Nombre de la Skill</p></label>
+                <input type="text" class="form-control" id="nombreH" name="nombreH" [(ngModel)]="harLab.nombreH" required>
+              </div>
+              <br>
+              <div class="form-group vito">
+                <label for="descripcionH"><p>Descripcion </p></label>
+                <input type="text" class="form-control" id="descripcionH" name="descripcionH" [(ngModel)]="harLab.descripcionH" required>
+              </div>
+              <br>
+              <div class="more">
+              <button class="btn btn-light ">
+                Actualizar
+              </button>
+              </div>
+              <br>
+            </form>
+
+        </div>
+    </div>
+</div>
+

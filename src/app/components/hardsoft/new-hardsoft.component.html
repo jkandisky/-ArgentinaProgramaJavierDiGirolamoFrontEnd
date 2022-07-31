@@ -1,0 +1,22 @@
+<div class="container xavi">
+    <div class="row vito">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                <label for="nombreH"><p>Nombre de la SKill</p></label>
+                <input type="text" class="form-control" id="nombreH" name="nombreH" [(ngModel)]="nombreH" required>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="descripcionH"><p>Descripcion </p></label>
+                <input type="text" class="form-control" id="descripcionH" name="descripcionH" [(ngModel)]="descripcionH" required>
+              </div>
+              <br>
+              <button class="btn btn-light">
+                Agregar Skill
+              </button>
+            </form>
+
+        </div>
+    </div>
+</div>

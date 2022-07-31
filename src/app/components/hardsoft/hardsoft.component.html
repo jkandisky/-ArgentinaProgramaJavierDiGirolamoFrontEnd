@@ -1,6 +1,28 @@
 <div class="row">
     <h1>Hard & Soft Skills</h1>
-    
+    <div class="col-lg-2 vito">
+        <button type="button" class="btn btn-dark" routerLink="/nuevahar" *ngIf="isLogged">
+        Nueva Skill
+        </button>
+          </div>
+          <div class="col-lg 1 ">
+           <div class="col-lg-11 vito">
+            <table class="table" style="border: hidden">
+              <tbody>
+                <tr *ngFor="let Hardsoft of hard">
+                  <td><h6>{{Hardsoft.nombreH}}</h6></td>
+                  <td>{{Hardsoft.descripcionH}}</td>
+                  <td *ngIf="isLogged">
+                  <button class="btn btn-light button" routerLink="/edithar/{{Hardsoft.id}}"><i class="bi bi-pencil-square"></i></button>
+                  </td>
+                  <td *ngIf="isLogged ">
+                    <button class="btn btn-light button" routerLink="/edithar/{{Hardsoft.id}}"(click)="delete(Hardsoft.id)"><i class="bi bi-trash-fill"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+        </div>
     <div class= "text-center col-sm-4 col-md-4 col-lg-4 transparente">
         <circle-progress
         [percent]="85"
@@ -31,20 +53,4 @@
     [animationDuration]="300"
     ></circle-progress>
 </div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4 transparente">
-    <circle-progress
-    [percent]="85"
-    [title]="'JS'"
-    [radius]="80"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'yellow'"
-    [innerStrokeColor]="'black'"
-    [animation]="true"
-    [animationDuration]="300"
-    ></circle-progress>
-</div>
-
 </div>
