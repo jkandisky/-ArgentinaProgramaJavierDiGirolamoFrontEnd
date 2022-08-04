@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class SProyectosService {
-  proURL = 'https://javierdigirolamo.herokuapp.com/'
+  proURL = 'https://javierdigirolamo.herokuapp.com/prolab/';
 
 
   constructor(private httpClient: HttpClient) { }

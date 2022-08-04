@@ -7,7 +7,7 @@ import { Sobremi } from '../model/sobremi';
   providedIn: 'root'
 })
 export class SSobremiService {
-  sobURL = 'https://javierdigirolamo.herokuapp.com/'
+  sobURL = 'https://javierdigirolamo.herokuapp.com/soblab/';
 
 
   constructor(private httpClient: HttpClient) { }
