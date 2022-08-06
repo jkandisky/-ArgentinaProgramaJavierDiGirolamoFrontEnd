@@ -42,3 +42,12 @@ img{
     margin-left:200px;
     margin-top: 50px;
   }
+
+  /*Nombre*/
+   
+    @media(max-width:575px){
+    #nombre{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+}
