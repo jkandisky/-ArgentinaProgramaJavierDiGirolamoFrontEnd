@@ -9,14 +9,14 @@ Nueva Experiencia
    <div class="col-lg 1 ">
    <div class="col-lg-11 vito">
     <table class="table" style="border: hidden">
-      <tbody>
+      <tbody style="border: hidden">
         <tr *ngFor="let Experiencia of expe">
-          <td><h6>{{Experiencia.nombreE}}</h6></td>
-          <td>{{Experiencia.descripcionE}}</td>
-          <td *ngIf="isLogged">
+          <td style="border: hidden"><h6>{{Experiencia.nombreE}}</h6></td>
+          <td style="border: hidden">{{Experiencia.descripcionE}}</td>
+          <td style="border: hidden"*ngIf="isLogged">
           <button class="btn btn-light button" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil-square"></i></button>
           </td>
-          <td *ngIf="isLogged ">
+          <td *ngIf="isLogged " style="border: hidden">
             <button class="btn btn-light button" routerLink="/editexp/{{Experiencia.id}}"(click)="delete(Experiencia.id)"><i class="bi bi-trash-fill"></i></button>
           </td>
         </tr>
