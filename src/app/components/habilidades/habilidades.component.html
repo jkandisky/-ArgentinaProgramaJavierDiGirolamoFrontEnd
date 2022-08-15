@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="row vito">
+    <h3>Habilidades</h3>
+    <div class="col lg-2 vito">
+        <td><button class="btn btn-dark" routerLink="/nuevahabilidad" *ngIf="isLogged"><i
+                    class="fa-solid fa-plus"></i>Nueva habilidad</button></td>
+        <div class="col-xg-12 table-responsive-sm vito">
+            <table class="table align-middle" id="tablas">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;" scope="col"></th>
+                        <th style="width: 80%;" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr *ngFor="let Habilidad of hab">
+                        <td style="border: hidden"><h4>{{Habilidad.nombreHab}}</h4></td>
+                        <td style="border: hidden">
+                            <div class="progressbar" style="height: 60px;">
+                                <div class="progress-bar bg-success progress-bar-striped" role="progressbar"
+                                    attr.aria-valuenow="{{Habilidad.valorHab}}" aria-valuemin="0" aria-valuemax="100"
+                                    style="height: 45px; width:{{Habilidad.valorHab}}%">
+                                    <b>{{Habilidad.valorHab}}%</b>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border: hidden" *ngIf="isLogged"><button class="btn btn-light button" (click)="borrar(Habilidad.id)"><i
+                            class="bi bi-trash-fill"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

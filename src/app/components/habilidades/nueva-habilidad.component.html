@@ -1,0 +1,21 @@
+<div class="container xavi">
+    <div class="row vito">
+        <div >
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <br>
+                <div class="form-group">
+                    <label for="nombreHab" id="titulo"><p>Software/Programa/Habilidad</p></label>
+                    <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="nombreHab" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="valorHab" id="titulo"><P>Porcentaje de manejo</P></label>
+                    <input type="text" class="form-control" id="valorHab" name="valorHab" [(ngModel)]="valorHab" required>
+                </div>
+                <br>
+                <br>
+                <button class="btn btn-light" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>

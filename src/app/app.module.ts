@@ -19,7 +19,7 @@ import {HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
@@ -33,6 +33,8 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos.comp
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewHardsoftComponent } from './components/hardsoft/new-hardsoft.component';
 import { EditHardsoftComponent } from './components/hardsoft/edit-hardsoft.component';
+import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad.component';
 
 @NgModule({
   declarations: [
@@ -62,14 +64,17 @@ import { EditHardsoftComponent } from './components/hardsoft/edit-hardsoft.compo
     NewProyectosComponent,
     EditProyectosComponent,
     NewHardsoftComponent,
-    EditHardsoftComponent
+    EditHardsoftComponent,
+    HabilidadesComponent,
+    NuevaHabilidadComponent
   ],
   imports: [
     BrowserModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     interceptorProvider

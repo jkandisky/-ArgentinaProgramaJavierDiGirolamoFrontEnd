@@ -7,7 +7,7 @@ import { Acercade } from '../model/acercade';
   providedIn: 'root'
 })
 export class SAcercadeService {
-  aceURL = 'https://javierdigirolamo.herokuapp.com/acelab/';
+  aceURL = 'http://localhost:8080/acelab/';
 
 
   constructor(private httpClient: HttpClient) { }
