@@ -7,27 +7,27 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  habUrl = 'http://localhost:8080/habilidades/'
+  habURL = 'https://javierdigirolamo.herokuapp.com/habilidades/';
 
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<Habilidad[]> {
-    return this.httpClient.get<Habilidad[]>(this.habUrl + 'lista');
+    return this.httpClient.get<Habilidad[]>(this.habURL + 'lista');
   }
 
   public detalle(id: number): Observable<Habilidad> {
-    return this.httpClient.get<Habilidad>(this.habUrl + `detalle/${id}`);
+    return this.httpClient.get<Habilidad>(this.habURL + `detalle/${id}`);
   }
 
   public actualizar(id: number, habilidad: Habilidad): Observable<any> {
-    return this.httpClient.put<any>(this.habUrl + `actualizar/${id}`, habilidad);
+    return this.httpClient.put<any>(this.habURL + `actualizar/${id}`, habilidad);
   }
 
   public save(habilidad: Habilidad): Observable<any> {
-    return this.httpClient.post<any>(this.habUrl + 'crear', habilidad);
+    return this.httpClient.post<any>(this.habURL + 'crear', habilidad);
   }
 
   public borrar(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.habUrl + `borrar/${id}`);
+    return this.httpClient.delete<any>(this.habURL + `borrar/${id}`);
   }
 }

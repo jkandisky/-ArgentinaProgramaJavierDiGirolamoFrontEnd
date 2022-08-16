@@ -7,7 +7,7 @@ import { Hardsoft } from '../model/hardsoft';
   providedIn: 'root'
 })
 export class SHardsoftService {
-  harURL = 'http://localhost:8080/harlab/';
+  harURL = 'https://javierdigirolamo.herokuapp.com/harlab/';
 
 
   constructor(private httpClient: HttpClient) { }
