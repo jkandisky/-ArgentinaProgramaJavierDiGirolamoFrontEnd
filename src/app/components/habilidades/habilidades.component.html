@@ -7,14 +7,18 @@
         <div class="col-xg-12 table-responsive-sm vito">
             <table class="table align-middle" id="tablas">
                 <thead>
+                    <tr >
+                        <th scope="col">Habilidad</th>
+                        <th scope="col">Grado de Conocimiento</th>
+                    </tr>
                     <tr>
                         <th style="width: 10%;" scope="col"></th>
                         <th style="width: 80%;" scope="col"></th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody class="table-group-divider"style="border: hidden">
                     <tr *ngFor="let Habilidad of hab">
-                        <td style="border: hidden"><h4>{{Habilidad.nombreHab}}</h4></td>
+                        <td style="border: hidden"><h6>{{Habilidad.nombreHab}}</h6></td>
                         <td style="border: hidden">
                             <div class="progressbar" style="height: 60px;">
                                 <div class="progress-bar bg-success progress-bar-striped" role="progressbar"

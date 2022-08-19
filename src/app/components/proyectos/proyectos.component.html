@@ -1,27 +1,30 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="row">
-  <h2>Proyectos</h2>
-  <div class="col-lg-2">
-    <button type="button" class="btn btn-dark" routerLink="/nuevapro" *ngIf="isLogged">
-    Nuevo Proyecto
-    </button>
+    <h3>Mis proyectos</h3>
+    <div class="col lg-2 vito">
+        <td><button class="btn btn-dark" routerLink="/nuevoproyecto" *ngIf="isLogged"><i class="fa-solid fa-plus"></i> Agregar nuevo proyecto</button></td>
     </div>
-    
-     <div class="col-lg 1 ">
-     <div class="col-lg-11 vito">
-      <table class="table" style="border: hidden">
-        <tbody style="border: hidden">
-          <tr *ngFor="let Proyectos of proy">
-            <td style="border: hidden"><h6>{{Proyectos.nombreP}}</h6></td>
-            <td style="border: hidden">{{Proyectos.descripcionP}}</td>
-            <td style="border: hidden"*ngIf="isLogged">
-            <button class="btn btn-light" routerLink="/editpro/{{Proyectos.id}}"><i class="bi bi-pencil-square"></i></button>
-            </td>
-            <td *ngIf="isLogged" style="border: hidden">
-            <button class="btn btn-light" (click)="delete(Proyectos.id)"><i class="bi bi-trash-fill"></i></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div> 
+
+    <div class="col-xg-12 table-responsive-sm vito">
+        <table class="table align-middle table-hover"style="border: hidden" id="tablas">
+            <thead>
+                <tr >
+                    <th scope="col">Nombre del Proyecto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Enlace</th>
+                    <th scope="col">Imagen</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider" style="border: hidden">
+                <tr *ngFor="let Proyectos of proy">
+                    <td style="border: hidden"><h6>{{Proyectos.nombreProy}}</h6></td>
+                    <td style="border: hidden">{{Proyectos.detalleProy}}</td>
+                    <td style="border: hidden"><a href="{{Proyectos.enlaceProy}}"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="img-fluid img-proyect rounded center-block d-block mx-auto" width="50" height="50"></a></td>
+                    <td style="border: hidden"><a href="{{Proyectos.imagen}}"><img src={{Proyectos.imagen}} class="img-fluid img-proyect rounded center-block d-block mx-auto" width="150" height="150" title="Ver imagen"></a></td>
+                    <td style="border: hidden" *ngIf="isLogged"><button class="btn btn-light button" routerLink="/editarproyecto/{{Proyectos.id}}"><i class="bi bi-pencil-square"></i></button></td>
+                    <td style="border: hidden" *ngIf="isLogged"><button class="btn btn-light button" (click)="borrar(Proyectos.id)"><i class="bi bi-trash-fill"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </div>
+</div>

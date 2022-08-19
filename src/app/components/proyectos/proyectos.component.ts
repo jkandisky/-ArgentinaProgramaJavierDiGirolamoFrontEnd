@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyectos } from 'src/app/model/proyectos';
-import { SProyectosService } from 'src/app/service/s-proyectos.service';
+import { ProyectosService } from 'src/app/service/proyectos.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -9,33 +9,37 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  proy:Proyectos[] = [];
+  proy: Proyectos[] = [];
 
-  constructor(private sProyectos: SProyectosService, private tokenService: TokenService) { }
-
+  constructor(private proyectoServicio: ProyectosService, private tokenServicio: TokenService) { }
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarProyectos();
-    if(this.tokenService.getToken()){
-      this.isLogged = true;
-    }else{
-      this.isLogged = false;
+
+    if(this.tokenServicio.getToken()){
+      this.isLogged=true;
+    } else {
+      this.isLogged=false;
     }
   }
+
   cargarProyectos():void{
-    this.sProyectos.lista().subscribe(data => {this.proy = data;})
-    
-} 
-  delete(id?: number){
+    this.proyectoServicio.lista().subscribe(data => {
+      this.proy = data;
+    })
+  }
+
+  borrar(id?: number){
     if(id != undefined){
-      this.sProyectos.delete(id).subscribe(
-        data => {
-          this.cargarProyectos();
-        }, err => {
-          alert("No se pudo borrar la epxeriencia");
-        }
-        )
-    } 
+    this.proyectoServicio.borrar(id).subscribe(
+      data => {
+        alert("Se borró la experiencia");
+        window.location.reload();
+      }, err => {
+        alert("Error");
+        window.location.reload();
+    })
+  }
   }
 }

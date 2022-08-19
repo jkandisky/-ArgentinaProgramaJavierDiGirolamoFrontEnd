@@ -11,8 +11,8 @@ import { EditHardsoftComponent } from './components/hardsoft/edit-hardsoft.compo
 import { NewHardsoftComponent } from './components/hardsoft/new-hardsoft.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
-import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
 import { EditSobremiComponent } from './components/sobremi/edit-sobremi.component';
 import { NewSobremiComponent } from './components/sobremi/new-sobremi.component';
 
@@ -28,12 +28,12 @@ const routes: Routes = [
   {path:'editsob/:id', component: EditSobremiComponent},
   {path:'nuevaace', component: NewAcercadeComponent},
   {path:'editace/:id', component: EditAcercadeComponent},
-  {path:'nuevapro', component: NewProyectosComponent},
-  {path:'editpro/:id', component: EditProyectosComponent},
   {path:'nuevahar', component: NewHardsoftComponent},
   {path:'edithar/:id', component: EditHardsoftComponent},
   {path: 'nuevahabilidad', component: NuevaHabilidadComponent},
-  {path: '', redirectTo: 'principal', pathMatch: 'full'}
+  {path: '', redirectTo: 'principal', pathMatch: 'full'},
+  {path: 'nuevoproyecto', component: NuevoProyectoComponent},
+  {path: 'editarproyecto/:id', component: EditarProyectoComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="container-mt-3 xavi">
+    <div class="row vito">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <br>
+                <div class="form-group">
+                    <label for="nombreProy" id="titulo"><p>Nombre del proyecto</p></label>
+                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="nombreProy" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="detalleProy" id="titulo"><p>Detalles del proyecto</p></label>
+                    <input type="text" class="form-control" id="detalleProy" name="detalleProy" [(ngModel)]="detalleProy" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="enlaceProy" id="titulo"><p>Enlace al proyecto</p></label>
+                    <input type="text" class="form-control" id="enlaceProy" name="enlaceProy" [(ngModel)]="enlaceProy" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="imagen" id="titulo"><p>Imagen del proyecto</p></label>
+                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen" required>
+                </div>
+                <br>
+                <br>
+                <button class="btn btn-light" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>

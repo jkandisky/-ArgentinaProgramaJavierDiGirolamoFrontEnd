@@ -6,10 +6,14 @@ Nueva Educacion
 </button>
 </div>
 
- <div class="col-lg 1 ">
- <div class="col-lg-11 vito">
+ <div>
+ <div class="col-xg-12 table-responsive-sm vito">
   <table class="table" style="border: hidden">
     <tbody style="border: hidden">
+      <tr >
+        <th scope="col">Institución</th>
+        <th scope="col">Descripción del Estudio</th>
+    </tr>
       <tr *ngFor="let Educacion of educ">
         <td style="border: hidden"><h6>{{Educacion.nombreE}}</h6></td>
         <td style="border: hidden">{{Educacion.descripcionE}}</td>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialComponent } from './components/social/social.component';
@@ -11,7 +10,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { HardsoftComponent } from './components/hardsoft/hardsoft.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { IconosComponent } from './components/iconos/iconos.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -29,12 +27,13 @@ import { NewSobremiComponent } from './components/sobremi/new-sobremi.component'
 import { EditSobremiComponent } from './components/sobremi/edit-sobremi.component';
 import { NewAcercadeComponent } from './components/acercade/new-acercade.component';
 import { EditAcercadeComponent } from './components/acercade/edit-acercade.component';
-import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
-import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewHardsoftComponent } from './components/hardsoft/new-hardsoft.component';
 import { EditHardsoftComponent } from './components/hardsoft/edit-hardsoft.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad.component';
+import { NuevoProyectoComponent } from './components/proyectos/nuevo-proyecto.component';
+import { EditarProyectoComponent } from './components/proyectos/editar-proyecto.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +46,6 @@ import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilida
     EducacionComponent,
     ExperienciaComponent,
     HardsoftComponent,
-    ProyectosComponent,
     IconosComponent,
     SobremiComponent,
     FooterComponent,
@@ -61,12 +59,13 @@ import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilida
     EditSobremiComponent,
     NewAcercadeComponent,
     EditAcercadeComponent,
-    NewProyectosComponent,
-    EditProyectosComponent,
     NewHardsoftComponent,
     EditHardsoftComponent,
     HabilidadesComponent,
-    NuevaHabilidadComponent
+    NuevaHabilidadComponent,
+    ProyectosComponent,
+    NuevoProyectoComponent,
+    EditarProyectoComponent
   ],
   imports: [
     BrowserModule,
